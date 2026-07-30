@@ -290,3 +290,26 @@ Ensembl's `documentacao_score` and `integracao_score` remain at the lessons-cata
 baseline (this session's extension covered the count, not the qualitative axes) --
 the coverage caveat is discussed further in the manuscript (kept local, not part of
 this repository).
+
+## NCBI -- instrument-vs-source control test (2026-07-29)
+
+Not a manual verification in the browser sense -- this checks whether the tool's own
+HTTP call to NCBI Assembly can be trusted, by comparing it against Biopython
+(`Bio.Entrez.esearch`), a widely used, community-maintained third-party client for
+the same Entrez API. The goal: isolate whether any observed divergence reflects a
+limitation of this project's script, or a genuine property of the source itself.
+
+**Method**: for all 19 pathogens, the exact same query term built by
+`src/audit_tool/common.py::or_group_tagged()` (including OR-combined multi-term
+cases, e.g. *Nakaseomyces glabrata* / *Candida glabrata*) was submitted twice --
+once through the script's own live probe, once through
+`Bio.Entrez.esearch(db="assembly", term=...)` -- and the returned counts compared.
+
+**Result: 19/19 exact matches.** Full data in `ncbi_biopython_control_test.csv`.
+This does not rule out an instrument/source confound for the other 8 sources (not
+tested this way), but for NCBI specifically it shows the script's plain
+`requests`-based HTTP call reproduces a reference client's behavior exactly --
+the divergence already documented elsewhere between the script and NCBI Datasets
+(e.g. 948 vs. 869 for *Candida auris*) reflects a real difference between NCBI's own
+interfaces, not a bug in this script. Added to the manuscript's Limitations section
+and as Supplementary Table S6.
