@@ -1,0 +1,20 @@
+pathogen_id,taxon_label,ensembl_api_raw_value,ensembl_site_value,note,classification
+1,Cryptococcus neoformans,41,41,Table filtered by 'Cryptococcus neoformans',exact_match
+2,Candida auris,7,N/D (qualitative finding),See note: table showed 1 record named 'Candida auris' + entries under historical synonyms; API totals 7,qualitative_finding_synonymy
+3,Aspergillus fumigatus,6,6,Table filtered by 'Aspergillus fumigatus',exact_match
+4,Candida albicans,26,26,Table filtered by 'Candida albicans',exact_match
+5,Nakaseomyces glabrata (Candida glabrata),11,11,1 record under 'Candida glabrata' + 10 records under 'Nakaseomyces glabratus' (grammatical gender variant of the epithet),exact_match_after_reconciliation
+6,Histoplasma spp.,5,5,Table filtered by 'Histoplasma',exact_match
+7,Eumycetoma causative agents,1,1,Table filtered by 'Madurella mycetomatis',exact_match
+8,Mucorales,18,0,"Filtering by 'Mucorales' returns nothing -- the 'Classification' column shows the subphylum (e.g., Mucoromycotina), not the order; confirmed that 7 Rhizopus genomes alone exist under that subphylum",false_negative_taxonomic_level
+9,Fusarium spp.,72,72,Table filtered by 'Fusarium' (72 rows counted),exact_match
+10,Candida tropicalis,1,1,Table filtered by 'Candida tropicalis',exact_match
+11,Candida parapsilosis,1,1,Table filtered by 'Candida parapsilosis',exact_match
+12,Scedosporium spp.,1,1,Table filtered by 'Scedosporium',exact_match
+13,Lomentospora prolificans,1,1,Table filtered by 'Lomentospora prolificans',exact_match
+14,Coccidioides spp.,8,8,Table filtered by 'Coccidioides' (substring also captured Paracoccidioides -- separated by reading the Name field),exact_match
+15,Pichia kudriavzevii (Candida krusei),4,4,Table filtered by 'Pichia kudriavzevii',exact_match
+16,Cryptococcus gattii,5,16,"Table filtered by 'Cryptococcus gattii' returns 16 genomes (cryptic species complex: VGI-VGIV, CA*, WM276, etc.); API returns 5 -- same synonymy/species-complex instability mechanism already identified in N. glabrata, but with much more severe undercounting (3.2x)",severe_undercount_species_complex
+17,Talaromyces marneffei,4,4,Table filtered by 'Talaromyces marneffei',exact_match
+18,Pneumocystis jirovecii,1,1,Table filtered by 'Pneumocystis jirovecii',exact_match
+19,Paracoccidioides spp.,5,5,Captured in the same search for 'Coccidioides' (substring); 5 Paracoccidioides genomes identified by reading the Name field,exact_match

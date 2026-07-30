@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Nextflow (if/when the tool is implemented in Nextflow, like the previous project)
+.nextflow/
+.nextflow.log*
+work/
+
+# Bulk output of the automated audit (generated, regenerable data, not version-controlled).
+# verificacao_manual/ is NOT included here -- it is validation evidence, deliberately version-controlled.
+resultados/
+
+# Secrets — never commit
+secrets.config
+*.env
+.env
+
+# Manuscript — unpublished academic work, deliberately kept out of the public
+# repository (the code/tool is public, the manuscript itself is not)
+manuscrito/
+
+# Large raw data (add specific exceptions if a small dataset
+# needs to be version-controlled)
+data/raw/
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+~$*

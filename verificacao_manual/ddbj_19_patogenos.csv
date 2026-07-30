@@ -1,0 +1,20 @@
+pathogen_id,taxon_label,total_entries_15years,verification_date,endpoint
+1,Cryptococcus neoformans,34519,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+2,Candida auris,24052,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+3,Aspergillus fumigatus,21243,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+4,Candida albicans,41904,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+5,Nakaseomyces glabrata (Candida glabrata),3075,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+6,Histoplasma spp.,2902,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+7,Eumycetoma causative agents,261,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+8,Mucorales,7556,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+9,Fusarium spp.,36815,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+10,Candida tropicalis,5101,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+11,Candida parapsilosis,4740,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+12,Scedosporium spp.,183,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+13,Lomentospora prolificans,78,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+14,Coccidioides spp.,2640,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+15,Pichia kudriavzevii (Candida krusei),2655,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+16,Cryptococcus gattii,1771,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+17,Talaromyces marneffei,1599,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+18,Pneumocystis jirovecii,837,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/
+19,Paracoccidioides spp.,408,2026-07-28,https://ddbj.nig.ac.jp/search/api/entries/

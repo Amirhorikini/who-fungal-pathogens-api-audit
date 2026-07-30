@@ -1,0 +1,20 @@
+id,priority_group,taxon_label,lit_synonyms,organism_terms
+1,critical,Cryptococcus neoformans,Cryptococcus neoformans|C. neoformans,Cryptococcus neoformans
+2,critical,Candida auris,Candida auris|C. auris,Candida auris
+3,critical,Aspergillus fumigatus,Aspergillus fumigatus|A. fumigatus,Aspergillus fumigatus
+4,critical,Candida albicans,Candida albicans|C. albicans,Candida albicans
+5,high,Nakaseomyces glabrata (Candida glabrata),Candida glabrata|C. glabrata|Nakaseomyces glabrata|N. glabrata,Candida glabrata|Nakaseomyces glabrata
+6,high,Histoplasma spp.,Histoplasma capsulatum|H. capsulatum|Histoplasma spp,Histoplasma capsulatum|Histoplasma
+7,high,Eumycetoma causative agents,eumycetoma|Madurella mycetomatis|M. mycetomatis|Falciformispora senegalensis|Curvularia lunata,Madurella mycetomatis
+8,high,Mucorales,Mucorales|mucormycosis|Rhizopus|Mucor|Lichtheimia corymbifera|L. corymbifera|Absidia corymbifera,Rhizopus|Mucor|Lichtheimia
+9,high,Fusarium spp.,Fusarium|Fusarium solani|Fusarium oxysporum|Fusarium species complex,Fusarium
+10,high,Candida tropicalis,Candida tropicalis|C. tropicalis,Candida tropicalis
+11,high,Candida parapsilosis,Candida parapsilosis|C. parapsilosis,Candida parapsilosis
+12,medium,Scedosporium spp.,Scedosporium|Scedosporium apiospermum|Scedosporium boydii|Scedosporium species complex,Scedosporium
+13,medium,Lomentospora prolificans,Lomentospora prolificans|L. prolificans|Scedosporium prolificans,Lomentospora prolificans
+14,medium,Coccidioides spp.,Coccidioides|Coccidioides immitis|Coccidioides posadasii,Coccidioides
+15,medium,Pichia kudriavzevii (Candida krusei),Candida krusei|C. krusei|Pichia kudriavzevii|P. kudriavzevii,Candida krusei|Pichia kudriavzevii
+16,medium,Cryptococcus gattii,Cryptococcus gattii|C. gattii,Cryptococcus gattii
+17,medium,Talaromyces marneffei,Talaromyces marneffei|T. marneffei,Talaromyces marneffei
+18,medium,Pneumocystis jirovecii,Pneumocystis jirovecii|P. jirovecii|Pneumocystis carinii,Pneumocystis jirovecii
+19,medium,Paracoccidioides spp.,Paracoccidioides|Paracoccidioides brasiliensis|P. brasiliensis|Paracoccidioides lutzii|P. lutzii,Paracoccidioides

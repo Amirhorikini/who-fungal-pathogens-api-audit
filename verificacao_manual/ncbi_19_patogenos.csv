@@ -1,0 +1,20 @@
+pathogen_id,taxon_label,ncbi_api_raw_value,ncbi_datasets_value,note,classification
+1,Cryptococcus neoformans,207,206,Resolved name: Cryptococcus neoformans (taxon 5207),close_match
+2,Candida auris,948,869,"Resolved name: Candidozyma auris (taxonomic reclassification, taxon 498019)",close_match_with_reclassification
+3,Aspergillus fumigatus,392,383,Resolved name: Aspergillus fumigatus (taxon 746128),close_match
+4,Candida albicans,149,147,Resolved name: Candida albicans (taxon 5476),close_match
+5,Nakaseomyces glabrata (Candida glabrata),108,101,"Resolved name: Nakaseomyces glabratus (taxonomic reclassification, taxon 5478)",close_match_with_reclassification
+6,Histoplasma spp.,10,14,"Resolved name: Histoplasma (taxon 5036); Datasets > API, only case in this direction",close_match_inverted
+7,Eumycetoma causative agents,10,9,Resolved name: Madurella mycetomatis (taxon 100816),close_match
+8,Mucorales,204,275,"API uses 3 genera (Rhizopus/Mucor/Lichtheimia); Datasets by taxon Mucorales includes the entire order (Cunninghamella, Backusella, Gilbertella, etc.) -- the tool underrepresents the full taxonomic scope",incomplete_taxonomic_scope_in_api
+9,Fusarium spp.,2114,2043,Resolved name: Fusarium (taxon 5506),close_match
+10,Candida tropicalis,123,117,Resolved name: Candida tropicalis (taxon 5482),close_match
+11,Candida parapsilosis,105,103,"Resolved name: Lodderomyces parapsilosis (taxonomic reclassification, taxon 5480)",close_match_with_reclassification
+12,Scedosporium spp.,21,21,Resolved name: Scedosporium (taxon 41687),exact_match
+13,Lomentospora prolificans,7,7,Resolved name: Lomentospora prolificans (taxon 41688),exact_match
+14,Coccidioides spp.,15,23,Resolved name: Coccidioides (taxon 5500),close_match_inverted
+15,Pichia kudriavzevii (Candida krusei),64,62,Resolved name: Pichia kudriavzevii (taxon 4909),close_match
+16,Cryptococcus gattii,8,8,Resolved name: Cryptococcus gattii (taxon 37769),exact_match
+17,Talaromyces marneffei,12,11,Resolved name: Talaromyces marneffei (taxon 37727),close_match
+18,Pneumocystis jirovecii,4,3,Resolved name: Pneumocystis jirovecii (taxon 42068),close_match
+19,Paracoccidioides spp.,17,17,Resolved name: Paracoccidioides (taxon 38946),exact_match
