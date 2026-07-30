@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this audit protocol or its data, please cite it as follows:"
 title: "Reliability Audit of the Data Infrastructure for WHO Priority Fungal Pathogens"
 authors:
-  - family-names: "Barbosa"
+  - family-names: "Horiquini"
     given-names: "Amir"
     affiliation: "Universidade de Ribeirão Preto (UNAERP)"
 version: 0.1.0
