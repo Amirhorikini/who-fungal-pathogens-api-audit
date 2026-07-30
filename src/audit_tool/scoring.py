@@ -1,17 +1,17 @@
-"""Per-axis scoring rubric (0-2), as defined in ../docs/02_metodologia.md.
+"""Per-axis scoring rubric (0-2), as defined in ../docs/02_methodology.md.
 
 Score domain: 0, 1, 2, or "ND" (not determined -- distinct from 0; used
 when there is not enough evidence to evaluate the axis, never as a synonym
 for "confirmed failure"). This distinction is the same lesson already applied
-in the previous project for "NA" vs. an actual zero (../docs/03_licoes_aprendidas.md,
+in the previous project for "NA" vs. an actual zero (../docs/03_lessons_learned.md,
 category D).
 
 KNOWN_BASELINE holds the Documentation and Integration scores -- axes that cannot
 be measured with a single automated HTTP call, so they use as a starting point
-the evidence already cataloged in ../docs/03_licoes_aprendidas.md (each entry
+the evidence already cataloged in ../docs/03_lessons_learned.md (each entry
 cites its source item). This is real evidence already collected, not
 guesswork -- but it must be reconfirmed by the manual sample-verification
-layer (../docs/02_metodologia.md) before it goes into the paper as a final
+layer (../docs/02_methodology.md) before it goes into the paper as a final
 result, not just as a baseline.
 
 The API score is computed dynamically from the live probe (see
@@ -40,17 +40,17 @@ KNOWN_BASELINE = {
     },
     "scielo": {
         "documentacao": 0,
-        "documentacao_note": "Access only via the OpenAlex publisher proxy; the ID/field originally used were invalid (silent HTTP 400), and even after the fix the proxy underestimates the actual source (lessons, items 2 and 17). RECONFIRMED on 2026-07-27 with exact per-pathogen figures (../../verificacao_manual/scielo_amostra.csv): 19.3x (Candida albicans), 10.8x (N. glabrata), 10.0x (Eumycetoma), 45.3x (P. jirovecii), zero-as-artifact (Lomentospora prolificans).",
+        "documentacao_note": "Access only via the OpenAlex publisher proxy; the ID/field originally used were invalid (silent HTTP 400), and even after the fix the proxy underestimates the actual source (lessons, items 2 and 17). RECONFIRMED on 2026-07-27 with exact per-pathogen figures (../../manual_verification/scielo_amostra.csv): 19.3x (Candida albicans), 10.8x (N. glabrata), 10.0x (Eumycetoma), 45.3x (P. jirovecii), zero-as-artifact (Lomentospora prolificans).",
         "integracao": 0,
-        "integracao_note": "Not an integrated native source -- depends entirely on OpenAlex's partial, underestimated coverage (fresh evidence in ../../verificacao_manual/scielo_amostra.csv).",
+        "integracao_note": "Not an integrated native source -- depends entirely on OpenAlex's partial, underestimated coverage (fresh evidence in ../../manual_verification/scielo_amostra.csv).",
     },
     "lilacs": {
         "api": 0,
-        "api_note": "CONFIRMED (not ND) on 2026-07-27: a direct HTTP request to pesquisa.bvsalud.org returned HTTP 403 via a Bunny Shield challenge; the actual count was only obtained via browser (manual verification, ../../verificacao_manual/lilacs_amostra.csv). The absence of an API is not assumed, it is tested as of this date.",
+        "api_note": "CONFIRMED (not ND) on 2026-07-27: a direct HTTP request to pesquisa.bvsalud.org returned HTTP 403 via a Bunny Shield challenge; the actual count was only obtained via browser (manual verification, ../../manual_verification/lilacs_amostra.csv). The absence of an API is not assumed, it is tested as of this date.",
         "documentacao": "ND",
         "documentacao_note": "Axis not applicable -- with no API, there is no API-behavior documentation to evaluate against reality.",
         "integracao": "ND",
-        "integracao_note": "No common identifier with the other 8 sources to test cross-referencing, even with a confirmed real data point (../../verificacao_manual/lilacs_amostra.csv) -- not determinable with the tool's current design.",
+        "integracao_note": "No common identifier with the other 8 sources to test cross-referencing, even with a confirmed real data point (../../manual_verification/lilacs_amostra.csv) -- not determinable with the tool's current design.",
     },
     "ensembl": {
         "documentacao": 1,
@@ -66,7 +66,7 @@ KNOWN_BASELINE = {
     },
     "ddbj": {
         "documentacao": 2,
-        "documentacao_note": "UPDATED on 2026-07-28 (no longer ND): the actual endpoint was found (GET /search/api/entries/), officially documented via OpenAPI 3.1 at ddbj.nig.ac.jp/search/api-doc/. Tested live against 'Candida auris' -- the response matches the documented schema exactly (../../verificacao_manual/ddbj_amostra.csv). The previous project had never actually investigated this (lessons, category D) -- the API existed the whole time, it just hadn't been looked for.",
+        "documentacao_note": "UPDATED on 2026-07-28 (no longer ND): the actual endpoint was found (GET /search/api/entries/), officially documented via OpenAPI 3.1 at ddbj.nig.ac.jp/search/api-doc/. Tested live against 'Candida auris' -- the response matches the documented schema exactly (../../manual_verification/ddbj_amostra.csv). The previous project had never actually investigated this (lessons, category D) -- the API existed the whole time, it just hadn't been looked for.",
         "integracao": 0,
         "integracao_note": "DDBJ is one of the 3 INSDC mirrors (along with NCBI/GenBank and EBI/ENA) -- high, expected structural overlap with this same tool's NCBI counts, with no common identifier used for deduplication. Same overlap risk pattern as PubMed/OpenAlex (items 16 and 19), but for genomic data -- new finding from this session, not from the original catalog.",
     },
@@ -112,7 +112,7 @@ def score_combination(probe):
 
     if not probe.attempted and "api" in baseline:
         # Source with no automated probe, but with manual-verification evidence
-        # (see ../../verificacao_manual/) that already confirms the score -- it
+        # (see ../../manual_verification/) that already confirms the score -- it
         # doesn't stay "ND" just because the tool can't test this on its own.
         api_score, api_note = baseline["api"], baseline["api_note"]
     else:

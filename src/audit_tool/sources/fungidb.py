@@ -1,7 +1,7 @@
 """FungiDB -- no confirmed count endpoint.
 
 Same situation as the previous query_fungidb.py (explicit stub -- see
-../../docs/03_licoes_aprendidas.md, category D): the actual search depends on
+../../docs/03_lessons_learned.md, category D): the actual search depends on
 predefined "questions" via POST with a specific JSON body, not confirmed.
 `attempted=False`, not a "0" or a network failure.
 """

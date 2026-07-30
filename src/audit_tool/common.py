@@ -5,7 +5,7 @@ two deliberate differences:
 
 1. Honest User-Agent by default, from the start. The previous project used a fake browser
    UA as the default and it got blocked by Zenodo's WAF (see
-   ../docs/03_licoes_aprendidas.md, item 5) -- this tool never pretends to be a browser.
+   ../docs/03_lessons_learned.md, item 5) -- this tool never pretends to be a browser.
 2. A single attempt per call, with no retry/backoff. The goal of the audit is to observe
    how the source behaves on a normal query -- masking a failure behind several
    retries would hide exactly the kind of instability this project wants to measure.
@@ -44,7 +44,7 @@ def load_pathogens(csv_path):
 
 def or_group_tagged(terms, tag):
     """Applies the Entrez field tag to EACH term, not to the entire OR group --
-    see ../docs/03_licoes_aprendidas.md, item 3, for why."""
+    see ../docs/03_lessons_learned.md, item 3, for why."""
     return " OR ".join([f'"{t}"[{tag}]' for t in terms])
 
 

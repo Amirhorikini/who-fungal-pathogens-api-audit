@@ -21,9 +21,9 @@
 - [x] `CITATION.cff` — citation file, repository URL filled in
 - [x] `src/` — audit protocol code, tested
 - [x] `src/requirements.txt` — dependencies
-- [x] `docs/`, `verificacao_manual/` — documentation and evidence
+- [x] `docs/`, `manual_verification/` — documentation and evidence
 - [x] Full manual verification (19/19 pathogens) for 8 of the 9 sources — CSVs in
-      `verificacao_manual/*_19_patogenos.csv`
+      `manual_verification/*_19_pathogens.csv`
 - [x] Everything above translated to English
 
 ## What's left to decide before publishing

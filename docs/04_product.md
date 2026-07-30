@@ -5,7 +5,7 @@
 Among the three options (CLI, manual checklist, spreadsheet), the decision is not
 mutually exclusive by nature — each solves a different part of the problem. But only
 one can be the **central product**, because only one can execute the automated layer
-defined in `02_metodologia.md` (9 sources x 19 pathogens, up to 171 combinations). A
+defined in `02_methodology.md` (9 sources x 19 pathogens, up to 171 combinations). A
 checklist or a spreadsheet, on their own, cannot query 9 live APIs.
 
 | Option | Why it is not the central product |
@@ -17,7 +17,7 @@ checklist or a spreadsheet, on their own, cannot query 9 live APIs.
 ## How the checklist and spreadsheet fit in, without becoming competing products
 
 - **Checklist** = the 0-2 per-axis scoring rubric (already defined in
-  `02_metodologia.md`) does not disappear — it becomes the decision logic the CLI
+  `02_methodology.md`) does not disappear — it becomes the decision logic the CLI
   applies internally, and it also serves as a printed/readable reference for
   whoever performs manual verification of the 6-pathogen sample, ensuring the manual
   and automated criteria are exactly the same.
@@ -39,7 +39,7 @@ audit.py --report                                       # consolidates into CSV/
 - Reuses, as a starting point, the query modules already existing in
   `../Versão_2/one_health_pipeline/bin/` (one per source) — not as a direct copy, but
   as a reference, because several of these modules carry the internal bugs
-  catalogued in `03_licoes_aprendidas.md` (category D) that need to be fixed or
+  catalogued in `03_lessons_learned.md` (category D) that need to be fixed or
   rewritten, not inherited.
 - Each source module, besides collecting the data (as it already did), returns a
   `ProbeResult` used to compute the **API** axis score per source-pathogen
@@ -47,7 +47,7 @@ audit.py --report                                       # consolidates into CSV/
   review)**: the Documentation and Integration axes are **not** recalculated per
   combination in this version — they come from `KNOWN_BASELINE` in `scoring.py`, a
   fixed score per source (9 values), repeated across the 19 report rows for tabular
-  consistency, not measured case by case. See `02_metodologia.md`, section "Real
+  consistency, not measured case by case. See `02_methodology.md`, section "Real
   limitation, found during critical review".
 - Structured output (CSV/JSON) is the contract between the CLI and the consolidated
   report — the same logic as the previous `merge_results.py`, adapted for the 3

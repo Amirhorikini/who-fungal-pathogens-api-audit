@@ -34,7 +34,7 @@ changed direction several times throughout the conversation before converging:
 > manual verification, a surveillance team's decision about the availability of a
 > reference genome for an emerging strain?
 
-Full detail: `docs/01_pergunta_de_pesquisa.md`.
+Full detail: `docs/01_research_question.md`.
 
 ## Methodology defined
 
@@ -47,7 +47,7 @@ Full detail: `docs/01_pergunta_de_pesquisa.md`.
   Nakaseomyces glabrata, Fusarium spp., Lomentospora prolificans, Pneumocystis
   jirovecii.
 
-Full detail: `docs/02_metodologia.md`, `docs/04_produto.md`.
+Full detail: `docs/02_methodology.md`, `docs/04_product.md`.
 
 ## Tool implemented (`src/`)
 
@@ -102,7 +102,7 @@ two stages.
   reconcile, with an undercount of ~3.2x (API=5, actual=16) due to a cryptic
   species complex.
 
-Full detail, with numbers and citations: `verificacao_manual/README.md`.
+Full detail, with numbers and citations: `manual_verification/README.md`.
 
 ## Relevant side finding (a process lesson, not just a data one)
 
@@ -122,7 +122,7 @@ Projeto/
 ├── docs/                     # design reasoning (RQ, methodology, lessons, product)
 ├── manuscrito/                # manuscript skeleton (results/discussion still empty)
 ├── src/                       # the tool (Python CLI)
-├── verificacao_manual/        # layer-2 validation evidence (version-controlled)
+├── manual_verification/        # layer-2 validation evidence (version-controlled)
 └── resultados/                # bulk audit output (gitignored, regenerable)
 ```
 

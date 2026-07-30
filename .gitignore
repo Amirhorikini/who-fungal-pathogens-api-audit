@@ -10,7 +10,7 @@ venv/
 work/
 
 # Bulk output of the automated audit (generated, regenerable data, not version-controlled).
-# verificacao_manual/ is NOT included here -- it is validation evidence, deliberately version-controlled.
+# manual_verification/ is NOT included here -- it is validation evidence, deliberately version-controlled.
 resultados/
 
 # Secrets — never commit

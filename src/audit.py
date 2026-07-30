@@ -3,7 +3,7 @@
 integration / API / documentation, for the 9 sources covering the 19 WHO
 fungal priority pathogens.
 
-See ../docs/02_metodologia.md and ../docs/04_produto.md for the full design.
+See ../docs/02_methodology.md and ../docs/04_product.md for the full design.
 
 Usage:
     python audit.py --list-sources

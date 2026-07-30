@@ -1,6 +1,6 @@
 # Audit tool — usage
 
-Implementation of the CLI described in `../docs/04_produto.md`. Actually tested
+Implementation of the CLI described in `../docs/04_product.md`. Actually tested
 against the real APIs (not a skeleton/stub) — see "Tested status" section below.
 
 ## Setup
@@ -46,7 +46,7 @@ justification alongside it (`*_note`), plus the raw result of the live probe
 **Important note on the axes**: `api_score` is computed dynamically from a real HTTP
 call made at execution time — it is the only fully automated axis in this version.
 `documentacao_score` and `integracao_score` are based on a baseline cited in
-`../docs/03_licoes_aprendidas.md` — they remain a fixed score per source, not
+`../docs/03_lessons_learned.md` — they remain a fixed score per source, not
 recalculated per source-pathogen combination; explicitly acknowledged as a
 limitation of the current product, discussed further in the manuscript (kept local,
 not part of this repository).
@@ -56,7 +56,7 @@ not part of this repository).
 Actually run against the real APIs, not just syntactically checked — it went through
 the full layer of 171 combinations (9 sources x 19 pathogens), 3 times over the
 course of development, and had the count axis (`raw_value`) manually reconfirmed for
-all 19 pathogens across 8 of the 9 sources (`../verificacao_manual/`):
+all 19 pathogens across 8 of the 9 sources (`../manual_verification/`):
 
 - `ncbi`, `pubmed`, `openalex`, `scielo`, `ensembl`, `zenodo`, `ddbj` — real HTTP call
   confirmed, `http_status=200` in practically 100% of the 19 combinations for each
@@ -64,21 +64,21 @@ all 19 pathogens across 8 of the 9 sources (`../verificacao_manual/`):
   with `raw_value` manually reconfirmed for all 19 pathogens.
 - `lilacs` — API confirmed absent (not "ND"): a direct HTTP test returns 403 (Bunny
   Shield). Real data obtained via manual browser verification for the complete 19
-  pathogens (`../verificacao_manual/lilacs_19_patogenos.csv`).
+  pathogens (`../manual_verification/lilacs_19_pathogens.csv`).
 - `fungidb` — investigated, remains "ND" as a deliberate decision: the web UI
   requires login (a VEuPathDB policy change, ~Mar/2025), the REST backend responds
   without login only for metadata, not for a per-organism count with enough
-  confidence to report without risking a wrong number (`../verificacao_manual/README.md`).
+  confidence to report without risking a wrong number (`../manual_verification/README.md`).
 
 **DDBJ is no longer a stub** — it had a real, documented endpoint (OpenAPI 3.1) that
-had never been looked for before this project. See `../verificacao_manual/README.md`,
+had never been looked for before this project. See `../manual_verification/README.md`,
 section "DDBJ".
 
 **NCBI Assembly**: the site's legacy search interface was discontinued during this
 project (redirects straight to a single genome for any query, not only single-result
 ones) — the `esearch` API used by the `ncbi.py` module continues to work normally;
 what changed was only the manual-verification path, adapted to NCBI Datasets (see
-`../verificacao_manual/README.md`, section "NCBI").
+`../manual_verification/README.md`, section "NCBI").
 
 ## What's missing (next implementation steps)
 

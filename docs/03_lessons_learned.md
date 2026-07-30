@@ -7,7 +7,7 @@ invented here; see the original README for the full technical detail of each ite
 
 **How to use this document**: each item was originally discovered as a "pipeline
 bug". Here they are reclassified by what actually caused the problem, to inform the
-design of the tool (`02_metodologia.md`). Not every item is evidence of a failure in
+design of the tool (`02_methodology.md`). Not every item is evidence of a failure in
 the *external infrastructure* — several are internal bugs in the previous code,
 listed separately because they are still a relevant lesson (how not to repeat the
 same mistake in the new tool), but they do not count as a "bad score" for any
@@ -82,6 +82,6 @@ project's "reuse" metric — kept here only to avoid confusion when rereading
 - **5** are about the validity of the reuse metric, out of scope for this project (category E).
 
 This already provides an initial empirical basis that the three axes of the
-evaluation model (`02_metodologia.md`) are not hypothetical — each one has at least 3
+evaluation model (`02_methodology.md`) are not hypothetical — each one has at least 3
 documented cases of real occurrence across the same 9 sources this project intends to
 formally audit.

@@ -18,14 +18,14 @@ binary verdict ("reliable"/"unreliable"):
 practice, that these three problems do not always come together — a source may have
 a stable API but misleading documentation (e.g., NCBI Assembly), or have real,
 substantial data but no programmatic API at all (e.g., LILACS). Collapsing this into
-a single verdict would hide that nuance. See `03_licoes_aprendidas.md` for the
+a single verdict would hide that nuance. See `03_lessons_learned.md` for the
 specific evidence behind each case.
 
 ### Objective per-axis scoring criteria (0-2 scale)
 
 Each axis is scored from 0 to 2 per source, with criteria anchored in observable
 evidence — not the evaluator's subjective judgment. The definition of each level
-draws directly on the failure types already catalogued in `03_licoes_aprendidas.md`,
+draws directly on the failure types already catalogued in `03_lessons_learned.md`,
 so the scale is calibrated against real cases, not hypothetical ones.
 
 **Integration**
@@ -84,7 +84,7 @@ Alternatives considered and set aside for now:
 ### Sample selection criteria for manual verification
 
 Proposed sample: **6 of the 19 pathogens**, chosen to cover the case-specific failure
-types already documented in `03_licoes_aprendidas.md`, not for convenience or volume:
+types already documented in `03_lessons_learned.md`, not for convenience or volume:
 
 | Pathogen | Why it is in the sample |
 |---|---|
@@ -120,7 +120,7 @@ specifically, the cost of extending was low enough to justify full coverage:
 **The other 6 sources remain on the original design** (6-pathogen sample, or a
 1-pathogen spot-check, or not verified) — the sampling logic remains valid there;
 there was no decision to abandon sampling as a general principle, only to apply full
-coverage where the cost-benefit balance changed. See `../verificacao_manual/README.md`
+coverage where the cost-benefit balance changed. See `../manual_verification/README.md`
 for the updated status of each source.
 
 ## Why the unit of analysis cannot be just "per source"
@@ -156,9 +156,9 @@ preserve the tabular format — not a case-sensitive measurement as the earlier 
 implied.
 
 **Consequence**: the claim that "each source module applies the 3-axis rubric, not
-just the raw count" (`04_produto.md`) needs to be read with this caveat. Properly
+just the raw count" (`04_product.md`) needs to be read with this caveat. Properly
 fixing this (making Documentation/Integration pathogen-sensitive) is future work, not
-implemented in this version — see `04_produto.md`, section "What this does NOT yet
+implemented in this version — see `04_product.md`, section "What this does NOT yet
 decide".
 
 ## Metrics inherited from the previous project — do not reuse without review

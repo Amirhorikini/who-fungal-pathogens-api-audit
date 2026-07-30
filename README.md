@@ -29,7 +29,7 @@ holds up and where it does not.
   triangulated independently across two genomic sources (Ensembl and NCBI), causing
   undercounts of up to 3.2x when the source does not recognize the current synonym.
 
-Full source-by-source detail, with numbers: [`verificacao_manual/README.md`](verificacao_manual/README.md).
+Full source-by-source detail, with numbers: [`manual_verification/README.md`](manual_verification/README.md).
 
 ## Research question
 
@@ -39,7 +39,7 @@ Full source-by-source detail, with numbers: [`verificacao_manual/README.md`](ver
 > manual verification, a surveillance team's decision about the availability of a
 > reference genome for an emerging strain?
 
-Full detail, motivating scenario, and scope: [`docs/01_pergunta_de_pesquisa.md`](docs/01_pergunta_de_pesquisa.md).
+Full detail, motivating scenario, and scope: [`docs/01_research_question.md`](docs/01_research_question.md).
 
 ## Final product
 
@@ -50,7 +50,7 @@ validation. The manuscript itself is not part of this public repository (see
 [Repository structure](#repository-structure)).
 
 Full methodological design (per-axis scoring model, validation strategy):
-[`docs/02_metodologia.md`](docs/02_metodologia.md).
+[`docs/02_methodology.md`](docs/02_methodology.md).
 
 ## Quick start
 
@@ -90,7 +90,7 @@ synonyms: `src/pathogens_19.csv`, also reproduced in the paper's Supplementary M
 | FungiDB | 0/19 | Blocked by a login wall since ~Mar/2025 (finding from this session) |
 
 Full detail, with numbers and methodology per source:
-[`verificacao_manual/README.md`](verificacao_manual/README.md).
+[`manual_verification/README.md`](manual_verification/README.md).
 
 ### Per-axis score (automated layer, 0-2 scale)
 
@@ -131,7 +131,7 @@ interpretation is in the manuscript (not part of this public repository).
 
 Per-pathogen values (19 x 8 sources) and the full snapshot of the 171 automated
 combinations are reproduced in the manuscript's Supplementary Material and, in raw
-form, in `verificacao_manual/*_19_patogenos.csv` and `resultados/auditoria.csv`
+form, in `manual_verification/*_19_pathogens.csv` and `resultados/auditoria.csv`
 (regenerable via `python audit.py --all`, not version-controlled).
 
 ## Repository structure
@@ -146,17 +146,17 @@ form, in `verificacao_manual/*_19_patogenos.csv` and `resultados/auditoria.csv`
 ├── .gitignore
 ├── .env.example                        # optional variables (e.g., API contact e-mail)
 ├── docs/                               # internal project design
-│   ├── 01_pergunta_de_pesquisa.md      # RQ, motivating scenario, scope
-│   ├── 02_metodologia.md               # per-axis scoring model + validation design
-│   ├── 03_licoes_aprendidas.md         # failures from the previous project, categorized
-│   └── 04_produto.md                   # format decision: CLI + rubric + output spreadsheet
+│   ├── 01_research_question.md      # RQ, motivating scenario, scope
+│   ├── 02_methodology.md               # per-axis scoring model + validation design
+│   ├── 03_lessons_learned.md         # failures from the previous project, categorized
+│   └── 04_product.md                   # format decision: CLI + rubric + output spreadsheet
 ├── src/                                 # the audit protocol (Python CLI)
 │   ├── audit.py
 │   ├── pathogens_19.csv
 │   └── audit_tool/
-└── verificacao_manual/                  # layer-2 validation evidence (version-controlled)
+└── manual_verification/                  # layer-2 validation evidence (version-controlled)
     ├── README.md                        # full source-by-source narrative
-    └── *_19_patogenos.csv               # raw data for each manual verification
+    └── *_19_pathogens.csv               # raw data for each manual verification
 ```
 
 Not shown above: a `manuscrito/` folder exists locally with the manuscript draft and
@@ -183,7 +183,7 @@ Tested against all 9 sources (8 with a confirmed live API; FungiDB correctly mar
 "ND" due to access being blocked, not for lack of testing). Run in full (171/171
 combinations) 3 times over the course of development — detail in `src/README.md`,
 section "Tested status". `resultados/` (output of `--all`) is not version-controlled
-(see `.gitignore`); the validation data itself (`verificacao_manual/`) is
+(see `.gitignore`); the validation data itself (`manual_verification/`) is
 version-controlled.
 
 ## Status
@@ -208,8 +208,8 @@ version-controlled.
 
 ## How to cite
 
-See [`CITATION.cff`](CITATION.cff). Summary: Amir Barbosa, Universidade de Ribeirão Preto
-(UNAERP), 2026.
+See [`CITATION.cff`](CITATION.cff). Summary: Amir Horiquini (Universidade de Ribeirão Preto,
+UNAERP) and Leonardo Sarzedas Carmo Vieira (Federal University of Minas Gerais), 2026.
 
 ## Relationship to the previous project
 
@@ -217,7 +217,7 @@ The code in this project is new, and its research question differs from that of 
 earlier project by the same author (outside this repository), which queried the same
 9 sources to measure data reuse in the literature, not access reliability. That
 earlier project served as a source of technical lessons reused here (see
-`docs/03_licoes_aprendidas.md`), but it is neither a code dependency nor a source of
+`docs/03_lessons_learned.md`), but it is neither a code dependency nor a source of
 reused results. The manuscript (kept local, not part of this repository) does not
 reference that earlier project — it describes this work as the first to apply this
 audit design.

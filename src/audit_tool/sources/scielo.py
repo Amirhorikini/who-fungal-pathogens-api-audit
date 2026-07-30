@@ -1,7 +1,7 @@
 """SciELO -- via the OpenAlex publisher proxy.
 
 *** WARNING: this proxy is known to underestimate 10-51x against native SciELO
-(see ../../docs/03_licoes_aprendidas.md, item 17). The probe below measures
+(see ../../docs/03_lessons_learned.md, item 17). The probe below measures
 whether the proxy responds, not whether the number is reliable -- this source's
 documentation/integration score in scoring.py already reflects this known
 underestimation. Direct querying of native SciELO requires a browser (WAF with a

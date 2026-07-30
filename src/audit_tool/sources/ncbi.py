@@ -3,7 +3,7 @@
 Reuses the endpoint and Entrez tag logic already validated in
 ../../../Versão_2/one_health_pipeline/bin/query_ncbi.py (esearch with
 or_group_tagged, date filtering via the GRLS field, not mindate/maxdate -- see
-../../docs/03_licoes_aprendidas.md, items 3 and 15).
+../../docs/03_lessons_learned.md, items 3 and 15).
 """
 from ..common import timed_get, or_group_tagged
 from .base import ProbeResult

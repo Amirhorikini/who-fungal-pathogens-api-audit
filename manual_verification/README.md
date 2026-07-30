@@ -7,10 +7,10 @@ Together with LILACS, SciELO, and DDBJ (already extended on 2026-07-28), this
 completes full manual coverage (19/19) for **8 of the 9 sources**. The one exception
 remains FungiDB, for a structural reason documented below (mandatory login since
 March 2025) — not for lack of effort. The `*_amostra.csv` files were replaced by
-`*_19_patogenos.csv`.
+`*_19_pathogens.csv`.
 
 
-Validation layer 2 as defined in `../docs/02_metodologia.md`: manual verification of
+Validation layer 2 as defined in `../docs/02_methodology.md`: manual verification of
 the 6 sample pathogens, compared against the tool's automated output
 (`../resultados/auditoria.csv`, gitignored as it is regenerable bulk output — the
 files in this folder **are** version-controlled because they are the validation data
@@ -28,13 +28,13 @@ exactly the case where manual verification changes the result, not just confirms
    tested again, today): a direct HTTP request to `pesquisa.bvsalud.org/portal/`
    returned **HTTP 403**, served by a Bunny Shield challenge
    (`/.bunny-shield/assets/...`) — the same behavior documented in
-   `../docs/03_licoes_aprendidas.md`, item 18, now verified on this date, not merely
+   `../docs/03_lessons_learned.md`, item 18, now verified on this date, not merely
    inherited.
 2. **Real count via browser** (`claude-in-chrome`, which passes the JS challenge
    normally), using the "LILACS Plus Collection" filter of the BVS Regional Portal.
    Initially for the 6-pathogen sample (2026-07-27); **extended to the full 19 on
    2026-07-28**, at the researcher's explicit request. Results in
-   `lilacs_19_patogenos.csv`.
+   `lilacs_19_pathogens.csv`.
 
 ### Result
 
@@ -73,7 +73,7 @@ Same pattern as LILACS: native search on `search.scielo.org` (via browser — it
 no WAF like BVS does, but the goal here is not to bypass a block, it is to measure
 against the real value, since the automated source is a proxy known to
 underestimate). Initially 6 pathogens (2026-07-27); **extended to the full 19 on
-2026-07-28**. Results in `scielo_19_patogenos.csv`.
+2026-07-28**. Results in `scielo_19_pathogens.csv`.
 
 ### Result: underestimation reconfirmed across the 19, with an exact number per pathogen
 
@@ -134,7 +134,7 @@ matched exactly.
 Implemented in `../src/audit_tool/sources/ddbj.py` — no longer a stub. Since it
 became a real source in the automated layer, it already runs on all 19 pathogens as
 of implementation (no extra browser cost — it is an API call, not manual
-verification). Full values in `ddbj_19_patogenos.csv` (e.g., Candida albicans =
+verification). Full values in `ddbj_19_pathogens.csv` (e.g., Candida albicans =
 41,904 entries in the 15-year window; smallest value: Paracoccidioides spp. = 408).
 
 **Caveat found and already recorded in `../src/audit_tool/scoring.py`**: DDBJ is one
@@ -158,7 +158,7 @@ organism search (`OrganismsByText`) requires a `POST` call with a `searchConfig`
 body whose exact shape was not confirmed with confidence in this session.
 **Deliberate decision: do not implement by trial and error** — guessing the body
 structure and reporting an unverified number would repeat exactly the type of error
-this entire project exists to prevent (see `../docs/03_licoes_aprendidas.md`).
+this entire project exists to prevent (see `../docs/03_lessons_learned.md`).
 `fungidb.py` remains a stub; `scoring.py` documents the investigation with the date
 and the specific reason, leaving no silent gap.
 
@@ -169,7 +169,7 @@ Extended from the 1-pathogen spot-check (Candida albicans, 2026-07-28) to the fu
 generate the search URL on each source's public site by literally reusing the tool's
 query-construction function (`or_group_tagged`, same synonyms, same 15-year window),
 run it via browser, read the total. Result in
-`pubmed_openalex_zenodo_19_patogenos.csv`.
+`pubmed_openalex_zenodo_19_pathogens.csv`.
 
 | Source | Exact or near-exact match | Largest discrepancy |
 |---|---|---|
@@ -219,7 +219,7 @@ by taxon. It is not an exact methodological match with the tool (it does not app
 the same `GRLS` 2011-2026 date filter, and it resolves by taxon ID rather than the
 Entrez synonym grouping used in `probe()`) -- hence treated as a "close" comparison,
 not an "exact" one, following the same cautious pattern already used for the
-Candida albicans spot-check. Data in `ncbi_19_patogenos.csv`.
+Candida albicans spot-check. Data in `ncbi_19_pathogens.csv`.
 
 | Result | Count | Pathogens |
 |---|---|---|
@@ -244,7 +244,7 @@ finding) to the full 19, using the "Filter" field of the official
 `fungi.ensembl.org/species.html` table and reading the rendered table text
 (`get_page_text`) -- a more reliable method than the general search UI used in the
 initial attempt, which returned inconsistent result types across pathogens. Data in
-`ensembl_19_patogenos.csv`.
+`ensembl_19_pathogens.csv`.
 
 | Result | Count | Detail |
 |---|---|---|

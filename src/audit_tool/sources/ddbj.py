@@ -16,7 +16,7 @@ Response: {"pagination": {"page":1,"perPage":1,"total":N}, "items":[...]}. Teste
 "Candida auris": total=24052 within the 15-year window, HTTP 200, response matches the
 documented schema exactly. This is neither fabrication nor guesswork -- URL, parameters,
 and response shape were confirmed against the official documentation AND tested live
-before being included here (see ../../verificacao_manual/ddbj_amostra.csv).
+before being included here (see ../../manual_verification/ddbj_amostra.csv).
 """
 from ..common import timed_get
 from .base import ProbeResult

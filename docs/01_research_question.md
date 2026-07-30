@@ -22,7 +22,7 @@ Refinement, in order:
    when tied to a situation with no time (and often no technical expertise) for
    manual verification — which is exactly what this project and the previous one had
    to do repeatedly to trust the numbers (e.g., manual browser-based verification of
-   SciELO/LILACS, see `03_licoes_aprendidas.md`).
+   SciELO/LILACS, see `03_lessons_learned.md`).
 3. **Concrete scenario chosen**: an epidemiological surveillance team trying to
    quickly determine whether an assembled reference genome already exists for an
    emerging fungal strain. This shifts the focus away from purely bibliometric
@@ -54,7 +54,7 @@ Refinement, in order:
 ## Final product
 
 **An audit tool/checklist plus a tool paper** (not a purely narrative paper). See
-`02_metodologia.md` for the design.
+`02_methodology.md` for the design.
 
 Justification of the choice, among three paths considered:
 
@@ -72,7 +72,7 @@ the three axes (integration, API, documentation) for the 19 WHO priority fungal
 pathogens (WHO FPPL 2022).
 
 **Out of scope (for now)**: continuous/long-term monitoring of the infrastructure
-(see `02_metodologia.md`, discarded alternative in favor of a single validation
+(see `02_methodology.md`, discarded alternative in favor of a single validation
 round); assessment of the quality of the primary data itself (e.g., the quality of a
 deposited genome) — the focus is the reliability of the *access layer*, not the
 underlying data.
@@ -81,7 +81,7 @@ underlying data.
 
 Decided: a command-line interface (CLI) tool in Python, with the scoring rubric and
 the results spreadsheet as components of it, not competing alternatives. Full
-justification: `04_produto.md`.
+justification: `04_product.md`.
 
 ## Still open
 
@@ -89,4 +89,4 @@ justification: `04_produto.md`.
   this tool+paper format, versus what the previous project's simulated review board
   already flagged as insufficient (see `../Versão_2/conselho/`).
 - Whether execution uses Nextflow (like the previous project) or a direct Python
-  script — see `04_produto.md`, final section.
+  script — see `04_product.md`, final section.
