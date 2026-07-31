@@ -1,5 +1,10 @@
 # Reliability Audit of the Data Infrastructure for WHO Priority Fungal Pathogens
 
+*Reliability audit of the data access infrastructure for the WHO Fungal Priority
+Pathogens List across 9 public sources (NCBI, PubMed, OpenAlex, SciELO, LILACS,
+Ensembl Fungi, Zenodo, DDBJ, FungiDB). CLI tool + two-layer validation evidence
+(171 automated combinations + manual verification).*
+
 > Project complete. Audit protocol implemented and tested, two-layer validation
 > complete. The accompanying manuscript is drafted separately and is **not**
 > included in this public repository (unpublished academic work, kept local by
